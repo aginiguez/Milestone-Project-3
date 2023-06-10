@@ -11,7 +11,7 @@ function CreateUser() {
 
     return (
         <div className='add d-row'>
-            <h2>Create User</h2>
+            <h2>Register</h2>
             {/* adding routes */}
 
             <div className="content">
@@ -36,6 +36,7 @@ function CreateUser() {
                 />
                 <br />
                 <br />
+                {/* will handle fetch from firebase once set up correctly */}
                 <button className="btn" onClick={handleSubmit}>
                     Submit
                 </button>
