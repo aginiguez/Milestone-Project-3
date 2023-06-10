@@ -1,16 +1,12 @@
 import React from 'react';
-import './App.css'
+import CreateUser from './components/pages/CreateUser';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/home" element= {<Home />} />
-        </Routes>
-      </Router>
-    </>
+    <div>
+    <CreateUser />
+    </div>
   );
 }
 
