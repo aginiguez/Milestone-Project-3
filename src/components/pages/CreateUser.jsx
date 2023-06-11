@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 
-
 function CreateUser() {
     const [email, setUserEmail] = useState('');
     const [username, setUsername] = useState('');
