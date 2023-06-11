@@ -1,7 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState } from 'react';
+
 
 function CreateUser() {
+    const [email, setUserEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setUserPassword] = useState('');
 
@@ -10,11 +12,20 @@ function CreateUser() {
     };
 
     return (
-        <div className='add d-row'>
-            <h2>Register</h2>
-            {/* adding routes */}
-
-            <div className="content">
+        <div className='formContainer' >
+            <div className="signContainer">
+            <h1>Pigeon</h1>
+            <h2>Sign up today</h2>
+            <label htmlFor="email">Email: </label>
+                <br />
+                <input
+                    type="text"
+                    placeholder='Email'
+                    id="email"
+                    value={email}
+                    onChange={ev => setUserEmail(ev.target.value)}
+                />
+                <br />
                 <label htmlFor="username">Username: </label>
                 <br />
                 <input
@@ -35,13 +46,12 @@ function CreateUser() {
                     onChange={ev => setUserPassword(ev.target.value)}
                 />
                 <br />
-                <br />
-                {/* will handle fetch from firebase once set up correctly */}
+                {/* will handle fetch from firebase/backend once set up correctly */}
                 <button className="btn" onClick={handleSubmit}>
                     Submit
                 </button>
+                </div>
             </div>
-        </div>
 
     );
 }
