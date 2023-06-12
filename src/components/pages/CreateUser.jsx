@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 function CreateUser() {
     const [email, setUserEmail] = useState('');
@@ -17,6 +19,7 @@ function CreateUser() {
             <h2>Sign up today</h2>
             <label htmlFor="email">Email: </label>
                 <br />
+                {/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input */}
                 <input
                     type="text"
                     placeholder='Email'
@@ -49,6 +52,9 @@ function CreateUser() {
                 <button className="btn" onClick={handleSubmit}>
                     Submit
                 </button>
+                <p>
+                If you have an account, welcome back -> <Link to="/login">Log in here</Link>
+                </p>
                 </div>
             </div>
 
